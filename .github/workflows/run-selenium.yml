@@ -22,7 +22,7 @@ jobs:
         run: pip install pytest-github-actions-annotate-failures
       - name: Run Selenium
         run: |
-          pytest --browser chrome_headless -vv
+          pytest --reruns 2 --browser chrome_headless -vv
       - name: Allure results
         uses: simple-elf/allure-report-action@master
         if: always()

@@ -29,10 +29,6 @@ def setup(request:pytest.FixtureRequest):
                 "goog:loggingPrefs", {"performance": "ALL", "browser": "ALL"}
             )
         chrome_options.add_argument("disable-dev-shm-usage")
-        chrome_options.add_argument("no-sandbox")
-        chrome_options.add_argument("allow-file-access-from-files")
-        chrome_options.add_argument("use-fake-device-for-media-stream")
-        chrome_options.add_argument("use-fake-ui-for-media-stream")
 
     match browser:
         case "chrome":
