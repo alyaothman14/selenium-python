@@ -1,0 +1,8 @@
+[
+    {
+        "level": "SEVERE",
+        "message": "https://sporty.com/api/middle/account/resolve - Failed to load resource: the server responded with a status of 500 ()",
+        "source": "network",
+        "timestamp": 1683314228484
+    }
+]
