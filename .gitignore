@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
 allure-results
+.DS_STORE
+.vscode
 __pycache__/
 *.py[cod]
 *$py.class
