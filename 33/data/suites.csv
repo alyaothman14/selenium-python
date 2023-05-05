@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri May 05 16:53:22 GMT 2023","Fri May 05 16:53:24 GMT 2023","2247","tests","test_login","TestLogin","","","firefox User is not allowed to enter invalid phone number","User is not allowed to enter invalid phone number"
