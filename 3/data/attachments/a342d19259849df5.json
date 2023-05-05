@@ -1,0 +1,56 @@
+[
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest 6 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/Roboto-Bold.4f39c57.ttf",
+        "source": "intervention",
+        "timestamp": 1683292990892
+    },
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest 6 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/Helvetica.06113bf.ttf",
+        "source": "intervention",
+        "timestamp": 1683292990892
+    },
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest 6 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/SFProText-Regular.90da7ab.ttf",
+        "source": "intervention",
+        "timestamp": 1683292990893
+    },
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest 6 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/SFProDisplay-Bold.aa9f6c1.ttf",
+        "source": "intervention",
+        "timestamp": 1683292990894
+    },
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest - Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/Roboto-Medium.13a2922.ttf",
+        "source": "intervention",
+        "timestamp": 1683292992481
+    },
+    {
+        "level": "INFO",
+        "message": "https://sporty.com/news/latest - Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/SFProDisplay-Medium.c9c3d29.ttf",
+        "source": "intervention",
+        "timestamp": 1683292992618
+    },
+    {
+        "level": "INFO",
+        "message": "https://s.sporty.com/fe-sporty-com/dist/client/41505e8.js 1 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/element-icons.313f7da.woff",
+        "source": "intervention",
+        "timestamp": 1683292992879
+    },
+    {
+        "level": "INFO",
+        "message": "https://s.sporty.com/fe-sporty-com/dist/client/41505e8.js 1 Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://s.sporty.com/fe-sporty-com/dist/client/fonts/Roboto-Regular.03523cf.ttf",
+        "source": "intervention",
+        "timestamp": 1683292992880
+    },
+    {
+        "level": "INFO",
+        "message": "console-api 2:39 \"Hello from the console log\"",
+        "source": "console-api",
+        "timestamp": 1683292994322
+    }
+]
