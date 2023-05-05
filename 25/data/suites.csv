@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 05 16:03:30 GMT 2023","Fri May 05 16:03:32 GMT 2023","1759","tests","test_login","TestLogin","","","User is not allowed to enter invalid phone number","User is not allowed to enter invalid phone number"
