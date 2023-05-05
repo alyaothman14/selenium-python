@@ -26,9 +26,8 @@ def setup(request:pytest.FixtureRequest):
     if(browser in("chrome","chrome_headless")):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.set_capability(
-                "goog:loggingPrefs", {"performance": "ALL", "browser": "ALL"}
+                "goog:loggingPrefs", { "browser": "ALL"}
             )
-        chrome_options.add_argument("disable-dev-shm-usage")
 
     match browser:
         case "chrome":
