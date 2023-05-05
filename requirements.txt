@@ -3,5 +3,4 @@ pytest==7.3.1
 webdriver_manager==3.8.3
 allure-pytest==2.13.1
 allure-python-commons==2.13.1
-reconium==0.6
-
+pytest-rerunfailures==11.1.2

@@ -26,8 +26,9 @@ def setup(request:pytest.FixtureRequest):
     if(browser in("chrome","chrome_headless")):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.set_capability(
-                "goog:loggingPrefs", {"performance": "ALL", "browser": "ALL"}
+                "goog:loggingPrefs", { "browser": "ALL"}
             )
+
     match browser:
         case "chrome":
             driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=chrome_options)
@@ -46,14 +47,9 @@ def setup(request:pytest.FixtureRequest):
     request.cls.nav_bar= SportyNavBarPage(driver)
     request.cls.country_code=SportyCountryCodePage(driver)
     yield driver
-      
-
-@pytest.fixture(autouse=True)
-def attach_artifacts_on_failure(request):
-    yield
     environment_properties = {
-        "Browser": request.cls.driver.name,
-        "Driver_Version": request.cls.driver.capabilities['browserVersion'],
+        "Browser": driver.name,
+        "Driver_Version": driver.capabilities['browserVersion'],
     }
     allure_env_path = os.path.join("allure-results", 'environment.properties')
     with open(allure_env_path, 'w') as f:
@@ -61,6 +57,9 @@ def attach_artifacts_on_failure(request):
         f.write(data)
     allure.attach(body=json.dumps(request.cls.driver.get_log("browser"), indent=4), name="Console Logs",attachment_type=allure.attachment_type.JSON)
     allure.attach(request.cls.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
-    request.cls.driver.quit()  
+    driver.quit()
+      
+
+   
 
 
