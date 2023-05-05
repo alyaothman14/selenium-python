@@ -49,7 +49,7 @@ def setup(request:pytest.FixtureRequest):
     yield driver
     environment_properties = {
         "Browser": driver.name,
-        "Driver_Version": .driver.capabilities['browserVersion'],
+        "Driver_Version": driver.capabilities['browserVersion'],
     }
     allure_env_path = os.path.join("allure-results", 'environment.properties')
     with open(allure_env_path, 'w') as f:
