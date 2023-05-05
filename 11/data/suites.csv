@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri May 05 14:30:10 GMT 2023","Fri May 05 14:30:42 GMT 2023","31461","tests","test_login","TestLogin","","","User is able to login,this should fail","User is able to login"
-"passed","Fri May 05 14:30:44 GMT 2023","Fri May 05 14:30:46 GMT 2023","1588","tests","test_login","TestLogin","","","User is able to change country code","User is able to change country code"
-"passed","Fri May 05 14:28:58 GMT 2023","Fri May 05 14:28:58 GMT 2023","655","tests","test_login","TestLogin","","","User is not allowed to enter alpha characters","User is not allowed to enter alpha characters"
-"passed","Fri May 05 14:28:54 GMT 2023","Fri May 05 14:28:55 GMT 2023","1042","tests","test_login","TestLogin","","","User is not allowed to enter invalid phone number","User is not allowed to enter invalid phone number"
-"passed","Fri May 05 14:32:08 GMT 2023","Fri May 05 14:32:09 GMT 2023","1543","tests","test_login","TestLogin","","","User is able to change country code","User is able to change country code"
