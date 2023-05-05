@@ -26,9 +26,9 @@ class TestLogin(BaseTest):
         #This is using an already created user
         #I would assume for sporty there is a way to create new users
         @allure.description("User is able to login")
-        @allure.title("User is able to login")
+        @allure.title("User is able to login,this should fail")
         def test_user_login(self):
-               self.login_page.login_existing_user(os.getenv("PHONE_NUMBER"),os.getenv("PASSWORD"),"alyaothman")
+               self.login_page.login_existing_user("01116888790","test","alyaothman")
 
         @allure.description("User is able to change country code")
         @allure.title("User is able to change country code")

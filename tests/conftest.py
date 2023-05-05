@@ -61,6 +61,7 @@ def attach_artifacts_on_failure(request):
         f.write(data)
     allure.attach(body=json.dumps(request.cls.driver.get_log("browser"), indent=4), name="Console Logs",attachment_type=allure.attachment_type.JSON)
     allure.attach(request.cls.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
-    request.cls.driver.quit()  
+    request.cls.driver.quit()
+    request.cls.driver.close()  
 
 
