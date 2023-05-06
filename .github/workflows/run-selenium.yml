@@ -20,7 +20,7 @@ jobs:
         with:
          command: install -d
       - name: Run Selenium tests on ${{matrix.browser}}
-        run: run pytest --reruns 1 -k ${{matrix.browser}} -vv
+        run: pytest --reruns 1 -k ${{matrix.browser}} -vv
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v3
