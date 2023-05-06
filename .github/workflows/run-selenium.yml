@@ -22,7 +22,7 @@ jobs:
       - name: Run Selenium tests on ${{matrix.browser}}
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
-         command: pytest --reruns 1 -k ${{matrix.browser}} -vv
+         command: run pytest --reruns 1 -k ${{matrix.browser}} -vv
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v3
