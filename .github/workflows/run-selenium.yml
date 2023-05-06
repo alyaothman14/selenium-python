@@ -15,18 +15,14 @@ jobs:
         browser: [chrome, firefox]
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Install dependencies
+        uses: VaultVulp/action-pipenv@v2.0.1
         with:
-          python-version: '3.10'
-          cache: 'pip'
-      - name: Python Dependency Installation
-        uses: py-actions/py-dependency-install@v4.0.0
-      - name: Install plugin
-        run: pip install pytest-github-actions-annotate-failures
+         command: install -d
       - name: Run Selenium tests on ${{matrix.browser}}
-        run: |
-          pipenv pytest --reruns 1 -k ${{matrix.browser}} -vv
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+         command: pytest --reruns 1 -k ${{matrix.browser}} -vv
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v3
