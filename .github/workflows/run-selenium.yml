@@ -15,18 +15,24 @@ jobs:
         browser: [chrome, firefox]
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.10'
-          cache: 'pip'
-      - name: Python Dependency Installation
-        uses: py-actions/py-dependency-install@v4.0.0
-      - name: Install plugin
-        run: pip install pytest-github-actions-annotate-failures
-      - name: Run Selenium tests on ${{matrix.browser}}
+          python-version: "3.11"
+      - name: Install pipenv
         run: |
-          pytest --reruns 1 -k ${{matrix.browser}} -vv
+          python -m pip install --upgrade pipenv wheel
+      - id: cache-pipenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+      - name: Install dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
+          pipenv install
+      - name: Run Selenium tests on ${{matrix.browser}}
+        run: pipenv run pytest --reruns 1 -k ${{matrix.browser}} -vv
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v3

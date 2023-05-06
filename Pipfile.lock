@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "87ca2ecb0c78d42a025b2c2d28bd80dab4903e6cb06e456bc0957137d014c8be"
+            "sha256": "36d16cdf3009a144084cbfd13c94805d9deb3b13cb86ada9f2dde34c44d5d023"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,22 @@
         ]
     },
     "default": {
+        "allure-pytest": {
+            "hashes": [
+                "sha256:17de9dbee7f61c8e66a5b5e818b00e419dbcea44cb55c24319401ba813220690",
+                "sha256:22243159e8ec81ce2b5254b4013802198821b1b42f118f69d4a289396607c7b3"
+            ],
+            "index": "pypi",
+            "version": "==2.13.2"
+        },
+        "allure-python-commons": {
+            "hashes": [
+                "sha256:2bb3646ec3fbf5b36d178a5e735002bc130ae9f9ba80f080af97d368ba375051",
+                "sha256:8a03681330231b1deadd86b97ff68841c6591320114ae638570f1ed60d7a2033"
+            ],
+            "index": "pypi",
+            "version": "==2.13.2"
+        },
         "async-generator": {
             "hashes": [
                 "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b",
@@ -192,6 +208,14 @@
             ],
             "index": "pypi",
             "version": "==7.3.1"
+        },
+        "pytest-rerunfailures": {
+            "hashes": [
+                "sha256:55611661e873f1cafa384c82f08d07883954f4b76435f4b8a5b470c1954573de",
+                "sha256:d21fe2e46d9774f8ad95f1aa799544ae95cac3a223477af94aa985adfae92b7e"
+            ],
+            "index": "pypi",
+            "version": "==11.1.2"
         },
         "python-dotenv": {
             "hashes": [
