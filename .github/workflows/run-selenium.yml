@@ -15,12 +15,24 @@ jobs:
         browser: [chrome, firefox]
     steps:
       - uses: actions/checkout@v3
-      - name: Install dependencies
-        uses: VaultVulp/action-pipenv@v2.0.1
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-         command: install -d
+          python-version: "3.7"
+      - name: Install pipenv
+        run: |
+          python -m pip install --upgrade pipenv wheel
+      - id: cache-pipenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+      - name: Install dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
+          pipenv install --deploy --dev
       - name: Run Selenium tests on ${{matrix.browser}}
-        run: pytest --reruns 1 -k ${{matrix.browser}} -vv
+        run: pipenv run pytest --reruns 1 -k ${{matrix.browser}} -vv
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v3
