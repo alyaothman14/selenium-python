@@ -64,6 +64,7 @@ jobs:
             subfolder: selenium
             gh_pages: gh-pages
             allure_history: allure-history
+            keep-history: 5
         - name: Deploy report to Github Pages
           if: always()
           uses: peaceiris/actions-gh-pages@v3
