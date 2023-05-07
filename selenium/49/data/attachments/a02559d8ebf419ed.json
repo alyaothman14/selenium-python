@@ -1,0 +1,8 @@
+[
+    {
+        "level": "INFO",
+        "message": "console-api 2:39 \"Hello from the console log\"",
+        "source": "console-api",
+        "timestamp": 1683489942888
+    }
+]
