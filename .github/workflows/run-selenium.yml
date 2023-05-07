@@ -61,6 +61,7 @@ jobs:
           with:
             allure_results: allure-results
             allure_report: allure-report
+            subfolder: selenium
             gh_pages: gh-pages
             allure_history: allure-history
         - name: Deploy report to Github Pages

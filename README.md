@@ -28,4 +28,4 @@ pipenv run pytest to run all
 allure serve
 ```
 
-#You can find the allure results [here](https://alyaothman14.github.io/selenium-python/37/#suites/e073428b7a30684178c11e51fcc1e40c/504c9285634c38c/)
+#You can find the allure results [here](https://alyaothman14.github.io/selenium-python/selenium/)
