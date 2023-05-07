@@ -10,6 +10,7 @@ webdriver-manager = "*"
 allure-pytest = "*"
 allure-python-commons = "*"
 pytest-rerunfailures = "*"
+pixelmatch = "*"
 
 [dev-packages]
 

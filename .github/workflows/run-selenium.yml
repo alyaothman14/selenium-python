@@ -53,16 +53,23 @@ jobs:
           with:
             name: 'allure-report-firefox'
             path: allure-results    
-        - name: Display structure of downloaded files
-          run: ls -R
+        - name: Get Allure history
+          uses: actions/checkout@v2
+          if: always()
+          continue-on-error: true
+          with:
+            ref: gh-pages
+            path: gh-pages
         - name: Allure results
           uses: simple-elf/allure-report-action@master
           id: allure-report
           with:
             allure_results: allure-results
             allure_report: allure-report
+            subfolder: selenium
             gh_pages: gh-pages
             allure_history: allure-history
+            keep_reports: 5
         - name: Deploy report to Github Pages
           if: always()
           uses: peaceiris/actions-gh-pages@v3
